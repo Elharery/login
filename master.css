@@ -45,9 +45,16 @@ display: block;
 font-family: system-ui;
 
 }
-span #click{
+span #click,#have{
     cursor: pointer;
     color: #0075ff;
+}
+#have{
+    font-family: system-ui;
+    font-size: 12px;
+}
+#have:hover{
+    text-decoration: underline;
 }
 /*form div{
     position: relative;

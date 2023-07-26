@@ -7,7 +7,7 @@ let password = document.querySelector("[name = 'password']")
 let passwordShow = document.querySelector("form .pas [type = 'checkbox']")
 let passwordShowT = document.querySelector("form [type = 'password']")
 let click = document.querySelector("#click")
-
+let have = document.getElementById("have")
 
 let uName = document.querySelector("#userName")
 let newPass = document.querySelector("#newPass")
@@ -20,6 +20,8 @@ click.onclick = () => {
     create.style.transition = "0.6s";
     form.style.transform = "rotateY(90deg)";
     create.style.transform = "rotateY(0deg)";
+    user.value = ""
+    pas.value = ""
     // form.style.display = "none";
     // create.style.display = "block";
 }
@@ -34,22 +36,38 @@ click.onclick = () => {
 // form Create Account
 
 //
+
 if (newPass.value === passAgain.value) {
     console.log("Yes");
     sub.onclick = function () {
-        uName.value = ""
-        newPass.value = ""
-        passAgain.value = ""
+        // uName.onblur = function () {
+        // }
+        // newPass.onblur = function () {
+        // }
+        // passAgain.onblur = function () {
+        // }
         form.style.transition = "0.6s";
         create.style.transition = "0.1s";
         form.style.transform = "rotateY(0deg)";
         create.style.transform = "rotateY(90deg)";
+        uName.value = ""
+        passAgain.value = ""
+        newPass.value = ""
         // form.style.display = "block";
         // create.style.display = "none";
-
+        
     }
 } else {
     console.log("no");
+}
+have.onclick = ()=> {
+    form.style.transition = "0.6s";
+    create.style.transition = "0.1s";
+    form.style.transform = "rotateY(00deg)";
+    create.style.transform = "rotateY(90deg)";
+    uName.value = ""
+    passAgain.value = ""
+    newPass.value = ""
 }
 
 uName.oninput = function () {
@@ -65,12 +83,15 @@ passAgain.oninput = function () {
 // let nameU = uName.value;
 submiT.addEventListener("click", () => {
 if (user.value === window.localStorage.getItem("userName") && pas.value === window.localStorage.getItem("newPass")) {
-    alert(`Hello ${user.value}`)
+    alert(`Hello ${user.value}🥰`)
     user.value = ""
     pas.value = ""
-
     }
 })
+// user.onblur = function () {
+// }
+// pas.onblur = function () {
+// }
     console.log(window.localStorage.getItem("userName"));
 // document.forms[0].onsubmit = function (e) {
 //     let userValid = false;
