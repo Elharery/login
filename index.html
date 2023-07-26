@@ -1,66 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/master.css">
-    <!-- <link rel="stylesheet" href="ss.css"> -->
-    <link rel="stylesheet" href="css/main.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Testing</title>
+<link rel="stylesheet" href="master.css">
+<style>
+</style>
 </head>
 <body>
-    <div class="login">
-        <div class="succed">
-            <div class="sue">
-                <i class="fa-regular fa-check"></i>
-                <span>Logged in successfully</span>
-                <!-- <span>Press (Ok)</span> -->
+    <hr>
+    <div class="page">
+        <div class="backFace">
+            <div class="create">
+                <div class="">
+                <h3>Create Account</h3>
+                <div class="">
+                    <!-- <label for="">userName</label> -->
+                    <input id="userName" type="username" placeholder="Your Name" value=""  name="" required>
+                </div>
+                <div class="pas">
+                    <!-- pattern=".{8,}" -->
+                <input id="newPass" type="password" placeholder="Your Password" name="password" >
+                <input id="passAgain" type="password" placeholder="Password Again">
+                        <!-- <div class="check-c">
+                            <input type="checkbox">
+                        </div> -->
+                </div>
+                <div class="sub-c">
+                    <!-- <input type="submit" value="Submit Data"/> -->
+                    <!-- <input type="submit" name="" id=""> -->
+                    <span class="submit">Save Data</span>
+                    </div>
+                </div>
             </div>
-                <div class="su">
-                    <a href="#" class="go">
+    <form action="">
+        <h3>Login</h3>
+                <div class="">
+                    <!-- <label for="">userName</label> -->
+                    <input id="user" type="username" placeholder="Your Name" name="user" required>
+                </div>
+                <div class="pas">
+                    <!-- pattern=".{8,}" -->
+                <input id="pas" type="password" placeholder="Your Password" name="password" >
+                        <!-- <div class="check">
+                            <input type="checkbox">
+                        </div> -->
+                </div>
+                <div class="sub" style="    margin: 15px 0 0 10px;">
+                <!-- <input type="submit" id="sub"value="Submit Data"> -->
+                <span id="sub">Submit</span>
+                <!-- <span class="helloUser"></span> -->
+                </div>
+                <span class="big">You Dont Have Account? <span id="click">Click Here</span></span>
+    </form>
+</div>
 
-                        Done
-                    </a>    
-                </div>
-        </div>
-        <div class="choose-inp">
-            <div class="buttons">
-                <h3 class="">Login</h3>
-            </div>
-                <div class="chooser">
-                    <span class="">
-                        number
-                    </span>
-                </div>
-                <div class="selected">
-                    <span class="">
-                        email
-                    </span>
-                </div>
-                <span class="dark">
-                    dark
-                </span>
-                <span class="light">light</span>
-        </div>
-        <form action="">
-            <input class="u" type="username" placeholder="username">
-                <div class="e">
-                    <input required class="email" type="email" name="email" placeholder="Email">
-                    <!-- <span>use number instead of email?</span> -->
-                </div>
-                <div class="div tel">
-                    <input required class="number" type="tel" placeholder="Your Number">
-                    <!-- <span>use email instead of number?</span> -->
-                </div>
-            <input class="pass" type="password" placeholder="password">
-            <!-- <input type="password" placeholder="current password"> -->
-            <span class="save">
-                Save
-            </span>    
-        </form>
-    </div>
-    <script src="js/master.js"></script>
+</div>
+<!-- </div> -->
+<script src="main.js"></script>
 </body>
 </html>

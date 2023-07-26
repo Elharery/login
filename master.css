@@ -1,0 +1,116 @@
+*{
+    border: none;
+    outline: none;
+}
+body{
+    background-color: #000049;
+}
+form{
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+div.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+input{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
+#user,
+#pas,
+#newPass,
+#userName,
+#passAgain{
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+} h3{
+    width: fit-content;
+    margin: 10px auto 20px;
+    font-size: 30px;
+    font-family: system-ui;
+}
+span.big{
+    font-size: 12px;
+width: fit-content;
+margin: 30px auto 0;
+display: block;
+font-family: system-ui;
+
+}
+span #click{
+    cursor: pointer;
+    color: #0075ff;
+}
+/*form div{
+    position: relative;
+}*/
+/*form div label{
+    position: absolute;
+    left: 15px;
+    top: 10px;
+} */
+.sub span, .sub-c span{
+    background-color: #eee;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.pas{
+    position: relative;
+}
+.check input{
+    cursor: pointer;
+}
+.check{
+position: absolute;
+top: 0;
+right: 12px;
+}
+.create{
+    /* display: none; */
+    transition: .5s;
+    background: #fff;
+width: 100%;
+height: 100%;
+/* z-index: 999; */
+top: 0;
+border-radius: 6px;
+padding: 10px;
+position: absolute;
+left: 0;
+transform: rotateY(90deg);
+}
+.backFace{
+    position: relative;
+}
+#userName,
+#newPass ,
+#passAgain{
+    width: fit-content;
+    margin: 0 auto 10px;
+}
+.check-c{
+    position: absolute;
+    transform: translate(-50%, 50%);
+    top: -15px;
+    right: 20px;
+}
+.sub-c{
+    margin: 20px auto 0;
+    width: fit-content;
+    text-align: center;
+}
+.sub-c input{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: #eee;
+}
