@@ -5,7 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Form Testing</title>
-<link rel="stylesheet" href="master.css">
+<link rel="stylesheet" href="css/all.min.css">
+<!--  -->
+<link rel="stylesheet" href="css/master.css">
 <style>
 </style>
 </head>
@@ -39,16 +41,18 @@
     <form id="f" action="">
         <span class="saved">Saved Data</span>
         <h3>Login</h3>
-                <div class="">
+                <div class="valid">
                     <!-- <label for="">userName</label> -->
-                    <input id="user" type="username" placeholder="Your Name" name="user" required>
+                    <input id="user" type="username" placeholder="Your Name" name="user" >
+                    <i class=" fa-regular fa-circle-info validU" style="font-weight: 900; color: red;display : none; position: absolute; top: 8px;right: 15px;"></i
                 </div>
-                <div class="pas">
+                <div class="pas valid">
                     <!-- pattern=".{8,}" -->
                 <input id="pas" type="password" placeholder="Your Password" name="password" >
                         <!-- <div class="check">
                             <input type="checkbox">
                         </div> -->
+                        <i class=" fa-regular fa-circle-info validP" style="font-weight: 900; color: red;display : none; position: absolute; top: 8px;right: 15px;"></i>
                 </div>
                 <div class="sub" style="    margin: 15px 0 0 10px;">
                 <!-- <input type="submit" id="sub"value="Submit Data"> -->

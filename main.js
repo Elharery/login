@@ -15,6 +15,8 @@ let passAgain = document.querySelector("#passAgain")
 let subC = document.querySelector(".sub-c")
 let sub = document.querySelector(".sub-c span")
 let create = document.querySelector(".create");
+let validU = document.querySelector(".validU")
+let validP = document.querySelector(".validP")
 click.onclick = () => {
     form.style.transition = "0.1s";
     create.style.transition = "0.6s";
@@ -39,7 +41,7 @@ click.onclick = () => {
 
 // if (newPass.value === passAgain.value) {
     console.log("Yes");
-    sub.onclick = function () {
+sub.onclick = function () {
         // uName.onblur = function () {
         // }
         // newPass.onblur = function () {
@@ -57,12 +59,20 @@ click.onclick = () => {
             newPass.value = ""
         } else {
             alert("Error Please fill in the fields")
-
             // window.localStorage.clear()
         }
         // form.style.display = "block";
         // create.style.display = "none";
         
+    }
+    uName.oninput = function () {
+        window.localStorage.setItem("userName" , uName.value)
+    }
+    newPass.oninput = function () {
+        window.localStorage.setItem("newPass" , newPass.value)
+    }
+    passAgain.oninput = function () {
+        window.localStorage.setItem("passAgain" , passAgain.value)
     }
 // } else {
 //     console.log("no");
@@ -90,17 +100,26 @@ have.onclick = ()=> {
 // }
 
 
-uName.oninput = function () {
-    window.localStorage.setItem("userName" , uName.value)
-}
-newPass.oninput = function () {
-    window.localStorage.setItem("newPass" , newPass.value)
-}
-passAgain.oninput = function () {
-    window.localStorage.setItem("passAgain" , passAgain.value)
-}
 //
 // let nameU = uName.value;
+user.oninput = function () {
+    if (user.value !== window.localStorage.getItem("userName")) {
+        user.style.borderColor = "red";
+        validU.style.display = "block";
+    } else {
+        user.style.borderColor = "#ddd";
+        validU.style.display = "none";
+    }
+}
+pas.oninput = function () {
+    if (pas.value !== window.localStorage.getItem("newPass")) {
+        pas.style.borderColor = "red";
+        validP.style.display = "block";
+    } else {
+        pas.style.borderColor = "#ddd";
+        validP.style.display = "none";
+    }
+}
 submiT.addEventListener("click", () => {
 if (user.value === window.localStorage.getItem("userName") && pas.value === window.localStorage.getItem("newPass")) {
     alert(`Hello ${user.value}🥰`)
