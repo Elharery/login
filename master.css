@@ -12,6 +12,9 @@ form{
     border-radius: 6px;
     transition: 0.3s;
 }
+.valid{
+    position: relative;
+}
 div.page{
     display: flex;
     justify-content: center;
