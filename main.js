@@ -8,7 +8,7 @@ let passwordShow = document.querySelector("form .pas [type = 'checkbox']")
 let passwordShowT = document.querySelector("form [type = 'password']")
 let click = document.querySelector("#click")
 let have = document.getElementById("have")
-
+let saved = document.querySelector(".saved")
 let uName = document.querySelector("#userName")
 let newPass = document.querySelector("#newPass")
 let passAgain = document.querySelector("#passAgain")
@@ -37,7 +37,7 @@ click.onclick = () => {
 
 //
 
-if (newPass.value === passAgain.value) {
+// if (newPass.value === passAgain.value) {
     console.log("Yes");
     sub.onclick = function () {
         // uName.onblur = function () {
@@ -46,20 +46,27 @@ if (newPass.value === passAgain.value) {
         // }
         // passAgain.onblur = function () {
         // }
-        form.style.transition = "0.6s";
-        create.style.transition = "0.1s";
-        form.style.transform = "rotateY(0deg)";
-        create.style.transform = "rotateY(90deg)";
-        uName.value = ""
-        passAgain.value = ""
-        newPass.value = ""
+        if (uName.value !== "" && newPass.value !== "" && passAgain.value !== "") {
+            form.style.transition = "0.6s";
+            create.style.transition = "0.1s";
+            form.style.transform = "rotateY(0deg)";
+            create.style.transform = "rotateY(90deg)";
+            alert("Saved Data")
+            uName.value = ""
+            passAgain.value = ""
+            newPass.value = ""
+        } else {
+            alert("Error Please fill in the fields")
+
+            // window.localStorage.clear()
+        }
         // form.style.display = "block";
         // create.style.display = "none";
         
     }
-} else {
-    console.log("no");
-}
+// } else {
+//     console.log("no");
+// }
 have.onclick = ()=> {
     form.style.transition = "0.6s";
     create.style.transition = "0.1s";
@@ -69,6 +76,19 @@ have.onclick = ()=> {
     passAgain.value = ""
     newPass.value = ""
 }
+// uName.onblur = function () {
+    
+//     window.localStorage.setItem("userName" , uName.value)
+// }
+// newPass.onblur = function () {
+    
+//     window.localStorage.setItem("newPass" , uName.value)
+// }
+// passAgain.onblur = function () {
+    
+//     window.localStorage.setItem("passAgain" , uName.value)
+// }
+
 
 uName.oninput = function () {
     window.localStorage.setItem("userName" , uName.value)
@@ -88,11 +108,8 @@ if (user.value === window.localStorage.getItem("userName") && pas.value === wind
     pas.value = ""
     }
 })
-// user.onblur = function () {
-// }
-// pas.onblur = function () {
-// }
-    console.log(window.localStorage.getItem("userName"));
+console.log(window.localStorage.getItem("userName"));
+    //
 // document.forms[0].onsubmit = function (e) {
 //     let userValid = false;
 //     let passwordValid = false;
