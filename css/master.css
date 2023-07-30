@@ -30,7 +30,8 @@ input{
 .er{
     position: absolute;
     top: 9px;
-    right: 20px;
+    right: 0;
+    margin-right: 20px;
 }
 #user,
 #pas,
