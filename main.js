@@ -102,7 +102,25 @@ have.onclick = ()=> {
 
 //
 // let nameU = uName.value;
-user.oninput = function () {
+// user.oninput = function () {
+//     if (user.value !== window.localStorage.getItem("userName")) {
+//         user.style.borderColor = "red";
+//         validU.style.display = "block";
+//     } else {
+//         user.style.borderColor = "#ddd";
+//         validU.style.display = "none";
+//     }
+// }
+// pas.oninput = function () {
+//     if (pas.value !== window.localStorage.getItem("newPass")) {
+//         pas.style.borderColor = "red";
+//         validP.style.display = "block";
+//     } else {
+//         pas.style.borderColor = "#ddd";
+//         validP.style.display = "none";
+//     }
+// }
+submiT.addEventListener("click", () => {
     if (user.value !== window.localStorage.getItem("userName")) {
         user.style.borderColor = "red";
         validU.style.display = "block";
@@ -110,8 +128,6 @@ user.oninput = function () {
         user.style.borderColor = "#ddd";
         validU.style.display = "none";
     }
-}
-pas.oninput = function () {
     if (pas.value !== window.localStorage.getItem("newPass")) {
         pas.style.borderColor = "red";
         validP.style.display = "block";
@@ -119,8 +135,6 @@ pas.oninput = function () {
         pas.style.borderColor = "#ddd";
         validP.style.display = "none";
     }
-}
-submiT.addEventListener("click", () => {
 if (user.value === window.localStorage.getItem("userName") && pas.value === window.localStorage.getItem("newPass")) {
     alert(`Hello ${user.value}🥰`)
     user.value = ""
