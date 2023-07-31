@@ -14,6 +14,7 @@ form{
 }
 .valid{
     position: relative;
+    margin: 10px;
 }
 div.page{
     display: flex;
@@ -24,14 +25,13 @@ div.page{
 }
 input{
     display: block;
-    margin: 10px;
+    /* margin: 10px; */
     padding: 10px;
 }
 .er{
     position: absolute;
     top: 9px;
-    right: 0;
-    margin-right: 20px;
+    right: 5px;
 }
 #user,
 #pas,
