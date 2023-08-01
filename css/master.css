@@ -12,7 +12,7 @@ form{
     border-radius: 6px;
     transition: 0.3s;
 }
-.valid{
+.validUser,.validPassword{
     position: relative;
     margin: 10px;
 }
@@ -24,14 +24,15 @@ div.page{
     flex-direction: column;
 }
 input{
-    display: block;
+    /* display: block; */
     /* margin: 10px; */
     padding: 10px;
 }
 .er{
     position: absolute;
-    top: 9px;
-    right: 5px;
+    top: 0;
+    transform: translate(-50%,50%);
+    right: 0;
 }
 #user,
 #pas,
