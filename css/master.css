@@ -24,7 +24,7 @@ div.page{
     flex-direction: column;
 }
 input{
-    /* display: block; */
+    display: block;
     /* margin: 10px; */
     padding: 10px;
 }
